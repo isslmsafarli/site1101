@@ -158,6 +158,31 @@ title: Home
       </article>
     </div>
   </section>
-  
+
+  <!-- Blog Section -->
+  <section id="blog" class="content-card">
+    <h2>Blog</h2>
+    
+    {% assign recent_posts = site.posts | sort: 'date' | reverse %}
+    <div class="blog-list">
+      {% for post in recent_posts limit:3 %}
+      <article class="blog-post">
+        <h3 class="blog-post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        <p class="blog-post-meta">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </p>
+        {% if post.excerpt %}
+        <p class="blog-post-excerpt">
+          {{ post.excerpt | strip_html | truncate: 160 }}
+        </p>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="blog-post-readmore">Read more →</a>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
 </div>
 

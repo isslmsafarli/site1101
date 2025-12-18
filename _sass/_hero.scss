@@ -167,3 +167,40 @@
   color: $accent;
 }
 
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.blog-post-title a {
+  text-decoration: none;
+}
+
+.blog-post-title a:hover {
+  color: $accent;
+}
+
+.blog-post-meta {
+  font-size: 0.9rem;
+  color: $text-muted;
+  margin-bottom: 0.25rem;
+}
+
+.blog-post-excerpt {
+  font-size: 0.95rem;
+  color: $text-secondary;
+  margin-bottom: 0.25rem;
+}
+
+.blog-post-readmore {
+  font-size: 0.9rem;
+  color: $accent;
+}
+
