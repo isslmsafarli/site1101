@@ -14,11 +14,14 @@
 }
 
 .bottom-nav-card {
-  background: $bg-card;
+  background: var(--bg-card);
   border-radius: $card-radius;
-  box-shadow: $nav-shadow;
+  box-shadow: var(--shadow-nav);
   padding: 0.75rem 1.5rem;
   pointer-events: auto; // Card itself captures clicks
+  transform: translateY(16px);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   
   @media (max-width: $mobile) {
     padding: 0.5rem 1rem;
@@ -43,11 +46,12 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  color: $text-secondary;
+  color: var(--text-secondary);
   background: transparent;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+  position: relative;
   
   @media (max-width: $mobile) {
     width: 36px;
@@ -63,13 +67,38 @@
   }
   
   &:hover {
-    background: #f3f4f6;
-    color: $text-primary;
-    transform: scale(1.05);
+    background: var(--nav-icon-hover-bg);
+    color: var(--text-primary);
+    transform: translateY(-2px) scale(1.05);
   }
   
   &:active {
     transform: scale(0.95);
+  }
+
+  // Tooltip
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    bottom: 110%;
+    transform: translateX(-50%) translateY(6px);
+    background: #111827;
+    color: #ffffff;
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+    z-index: 1001;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
