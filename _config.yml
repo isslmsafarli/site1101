@@ -27,10 +27,15 @@ url: "https://username.github.io"
 twitter_username: jekyllrb
 github_username:  jekyll
 
+markdown: kramdown
+sass:
+  style: compressed
+
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+# Using custom layout/styles, so default theme is not required
+# theme: minima
+# plugins:
+#   - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.

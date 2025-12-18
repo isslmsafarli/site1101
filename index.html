@@ -3,39 +3,161 @@ layout: default
 title: Home
 ---
 
-<section class="hero" id="about">
-  <div class="hero-content">
-    <img src="https://via.placeholder.com/200" alt="Profile Photo" class="profile-photo">
-
-    <h1 class="hero-name">John Doe</h1>
-
-    <p class="hero-title">Try to be entrepreneur</p>
-
-    <p class="hero-description">
-      I'm passionate about building web applications that make a difference.
-      Currently studying Computer Science at University and working on exciting projects.
-    </p>
-
-    <div class="social-links">
-      <a href="#" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
-        <span class="social-arrow">&rarr;</span>
-      </a>
-      <a href="#" aria-label="Codecademy">
-        <i class="fas fa-code"></i>
-        <span>Codecademy</span>
-        <span class="social-arrow">&rarr;</span>
-      </a>
-      <a href="#" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-        <span>LinkedIn</span>
-        <span class="social-arrow">&rarr;</span>
-      </a>
+<div class="page-wrapper">
+  
+  <!-- Hero Section Card -->
+  <section id="hero" class="hero-card">
+    <div class="hero-content">
+      
+      <!-- Text Column (Left) -->
+      <div class="hero-text">
+        <h1 class="hero-greeting">Hi, I'm Islam 👋</h1>
+        
+        <p class="hero-description">
+          Try to be serial entrepreneur | CS student | Passionate About Innovation and Technology
+        </p>
+      </div>
+      
+      <!-- Photo Column (Right) -->
+      <div class="hero-photo">
+        <img src="{{ '/assets/images/Islam_Safarli_profile.png' | relative_url }}" alt="Islam Safarli profile photo" class="profile-image">
+      </div>
+      
     </div>
+  </section>
+  
+  <!-- About Section Placeholder -->
+  <section id="about" class="content-card">
+    <h2>About</h2>
+    <p>I'm Islam, a Computer Science student who builds, tests, and improves ideas in the real world. I'm driven by curiosity, execution, and growth, not titles or trends.</p>
+    <p>I enjoy turning problems into systems, learning by doing, and pushing myself through hands-on work. I'm especially interested in technology, innovation, and how products grow from zero to something meaningful.</p>
+    <p>I'm at an early stage of my journey, focused on learning fast, thinking independently, and building skills that compound over time.</p>
+  </section>
+  
+  <!-- Work Experience Section -->
+  <section id="work" class="content-card">
+    <h2>Work Experience</h2>
+    
+    <div class="item-list">
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/alfasayt.png' | relative_url }}" alt="Alfasayt Digital Solutions logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">Alfasayt Digital Solutions</h3>
+          <p class="item-subtitle">Founder</p>
+          <p class="item-description">
+            Founded a web-development agency delivering custom, affordable websites for SMEs. Handled full-cycle development (design → deployment). In 4 months, completed 20+ websites. Now exploring how to hack growth with this traditional business while we are in the beginner stage.
+          </p>
+        </div>
+        <div class="item-meta">Aug 2025 – Present</div>
+      </article>
+      
+      <article class="item-row">
+        <div class="item-logo">eZ</div>
+        <div class="item-body">
+          <h3 class="item-title">e-Zəmanət</h3>
+          <p class="item-subtitle">Co-Founder &amp; Software Developer</p>
+          <p class="item-description">
+            Co-founded a digital warranty startup developing a secure system to manage and verify product warranties, replacing traditional paper documentation.
+          </p>
+        </div>
+        <div class="item-meta">Oct 2025 – Present</div>
+      </article>
+    </div>
+  </section>
 
-    <a href="#projects" class="cta-button">View My Projects</a>
-  </div>
-</section>
+  <!-- Education Section -->
+  <section id="education" class="content-card">
+    <h2>Education</h2>
+    
+    <div class="item-list">
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/ADA.png' | relative_url }}" alt="ADA University logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">ADA University</h3>
+          <p class="item-subtitle">Computer Science Student</p>
+        </div>
+        <div class="item-meta">2025 – 2029</div>
+      </article>
+      
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/fritl.png' | relative_url }}" alt="Physics-Mathematics and Informatics Biased Lyceum logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">Physics-Mathematics and Informatics Biased Lyceum</h3>
+          <p class="item-subtitle">High School</p>
+        </div>
+        <div class="item-meta">2020 – 2025</div>
+      </article>
+    </div>
+  </section>
 
+  <!-- Volunteering Section -->
+  <section id="volunteering" class="content-card">
+    <h2>Volunteering</h2>
+    
+    <div class="item-list">
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/cop29.jpg' | relative_url }}" alt="COP29 logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">COP29</h3>
+          <p class="item-subtitle">Transport Team Member</p>
+          <p class="item-description">
+            Assisted international guests with airport transport operations. Completed training on sustainability, inclusion, and environmental awareness.
+          </p>
+        </div>
+        <div class="item-meta">Jul 2024 – Nov 2024</div>
+      </article>
+      
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/edudistance.jpg' | relative_url }}" alt="Edu Distance logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">Edu Distance</h3>
+          <p class="item-subtitle">Olympiad Tutor</p>
+          <p class="item-description">
+            Mentored students preparing for national informatics competitions. Taught problem-solving strategies and algorithmic thinking.
+          </p>
+        </div>
+        <div class="item-meta">Sep 2023 – Dec 2024</div>
+      </article>
+      
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/byf.jpg' | relative_url }}" alt="Build Your Future logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">Build Your Future</h3>
+          <p class="item-subtitle">Developer</p>
+          <p class="item-description">
+            Built a database system for an educational charity managing thousands of students, improving workflow and data handling processes.
+          </p>
+        </div>
+        <div class="item-meta">Dec 2023 – Oct 2024</div>
+      </article>
+      
+      <article class="item-row">
+        <div class="item-logo">
+          <img src="{{ '/assets/images/icpc.png' | relative_url }}" alt="ICPC logo">
+        </div>
+        <div class="item-body">
+          <h3 class="item-title">ICPC</h3>
+          <p class="item-subtitle">Crowd Control Team Member</p>
+          <p class="item-description">
+            Supported event organization during regional programming contests and assisted with crowd flow and competition environment management.
+          </p>
+        </div>
+        <div class="item-meta">Aug 2025</div>
+      </article>
+    </div>
+  </section>
+  
+</div>
 

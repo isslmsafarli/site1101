@@ -1,139 +1,84 @@
-@import "variables";
-
-.site-header {
+.bottom-nav-wrapper {
   position: fixed;
-  top: 0;
+  bottom: 1.5rem;
   left: 0;
   right: 0;
-  height: 70px;
-  background-color: $white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
-  z-index: 50;
-}
-
-.nav-container {
-  max-width: 1120px;
-  margin: 0 auto;
-  height: 100%;
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
-
-.logo {
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  font-size: 1.1rem;
-}
-
-.nav-menu {
-  flex: 1;
+  z-index: 1000;
   display: flex;
   justify-content: center;
+  pointer-events: none; // Allow clicks to pass through wrapper
+  
+  @media (max-width: $mobile) {
+    bottom: 1rem;
+  }
 }
 
-.nav-links {
-  list-style: none;
+.bottom-nav-card {
+  background: $bg-card;
+  border-radius: $card-radius;
+  box-shadow: $nav-shadow;
+  padding: 0.75rem 1.5rem;
+  pointer-events: auto; // Card itself captures clicks
+  
+  @media (max-width: $mobile) {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+}
+
+.nav-icons {
   display: flex;
-  gap: 2.5rem;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  gap: 0.5rem;
+  
+  @media (max-width: $mobile) {
+    gap: 0.25rem;
+  }
 }
 
-.nav-links a {
-  font-size: 1rem;
-  color: $text-gray;
-  position: relative;
-  padding-bottom: 0.2rem;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background-color: $text-dark;
-  transition: width 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: $text-dark;
-  transform: translateY(-1px);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: $text-secondary;
+  background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.25rem;
-}
-
-.menu-toggle-bar {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: $text-dark;
-  border-radius: 999px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.menu-toggle-bar + .menu-toggle-bar {
-  margin-top: 5px;
-}
-
-@media (max-width: $mobile) {
-  .nav-menu {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background-color: $white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
-    transform: translateY(-100%);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: all 0.3s ease;
+  
+  @media (max-width: $mobile) {
+    width: 36px;
+    height: 36px;
   }
-
-  .nav-menu.active {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
+  
+  i {
+    font-size: 1.15rem;
+    
+    @media (max-width: $mobile) {
+      font-size: 1rem;
+    }
   }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0 1.5rem;
-    gap: 1rem;
+  
+  &:hover {
+    background: #f3f4f6;
+    color: $text-primary;
+    transform: scale(1.05);
   }
-
-  .menu-toggle {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu-toggle.active .menu-toggle-bar:first-child {
-    transform: translateY(3.5px) rotate(45deg);
-  }
-
-  .menu-toggle.active .menu-toggle-bar:last-child {
-    transform: translateY(-3.5px) rotate(-45deg);
+  
+  &:active {
+    transform: scale(0.95);
   }
 }
 
+.theme-toggle {
+  margin-left: 0.25rem;
+  
+  &:hover {
+    background: $accent;
+    color: white;
+  }
+}
 
