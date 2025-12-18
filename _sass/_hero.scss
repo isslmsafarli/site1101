@@ -204,3 +204,61 @@
   color: $accent;
 }
 
+.contact-intro {
+  font-size: 1rem;
+  color: $text-secondary;
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.contact-item:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.contact-item-static {
+  cursor: default;
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+  color: $accent;
+  flex-shrink: 0;
+}
+
+.contact-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-size: 0.85rem;
+  color: $text-muted;
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  color: $text-primary;
+}
+
