@@ -90,6 +90,10 @@
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
+  
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+  }
 }
 
 .item-logo {
@@ -112,6 +116,7 @@
 
 .item-body {
   flex: 1;
+  min-width: 0; // Allows text to wrap properly
 }
 
 .item-title {
@@ -129,6 +134,10 @@
 .item-description {
   font-size: 0.95rem;
   color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 100%;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .item-meta {
@@ -136,10 +145,15 @@
   color: var(--text-muted);
   white-space: nowrap;
   margin-left: 1rem;
+  flex-shrink: 0;
+  text-align: right;
   
   @media (max-width: $mobile) {
     align-self: flex-start;
     margin-left: 0;
+    text-align: left;
+    width: 100%;
+    margin-top: 0.5rem;
   }
 }
 
