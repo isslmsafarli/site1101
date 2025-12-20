@@ -159,28 +159,29 @@ title: Home
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="content-card">
-    <h2>Blog</h2>
+  <!-- Projects Section -->
+  <section id="projects" class="content-card">
+    <h2>Projects</h2>
     
-    {% assign recent_posts = site.posts | sort: 'date' | reverse %}
-    <div class="blog-list">
-      {% for post in recent_posts limit:3 %}
-      <article class="blog-post">
-        <h3 class="blog-post-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        <p class="blog-post-meta">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </p>
-        {% if post.excerpt %}
-        <p class="blog-post-excerpt">
-          {{ post.excerpt | strip_html | truncate: 160 }}
-        </p>
-        {% endif %}
-        <a href="{{ post.url | relative_url }}" class="blog-post-readmore">Read more →</a>
+    <div class="project-list">
+      <article class="project-item">
+        <div class="project-image-wrapper">
+          <img src="{{ '/assets/images/logic_gate.png' | relative_url }}" alt="Logic Gates Project" class="project-image">
+        </div>
+        <div class="project-content">
+          <h3 class="item-title">SITE 1101: Logic Gates Construction</h3>
+          <p class="item-subtitle">Team Project - Hardware & Electronics</p>
+          <p class="item-description">
+            Constructed and tested three basic logic gates (NOT, AND, OR) using transistors and electronic components on solderless breadboards. Built circuits using NPN transistors (PN2222), resistors, LEDs, pushbuttons, and jumper wires. Created a comprehensive video demonstration explaining the construction process and how each logic gate functions. This hands-on project deepened understanding of digital logic fundamentals and circuit design principles.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Electronics</span>
+            <span class="tech-tag">Circuit Design</span>
+            <span class="tech-tag">Logic Gates</span>
+            <span class="tech-tag">Team Collaboration</span>
+          </div>
+        </div>
       </article>
-      {% endfor %}
     </div>
   </section>
 

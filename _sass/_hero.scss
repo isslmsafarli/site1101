@@ -268,3 +268,72 @@
   color: var(--text-primary);
 }
 
+// Projects Section
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.project-image-wrapper {
+  flex-shrink: 0;
+  width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover .project-image {
+  transform: scale(1.02);
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-page);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: var(--nav-icon-hover-bg);
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
